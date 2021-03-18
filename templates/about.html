@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block body %}  
+  <!-- Page Header -->
+  <div id="home" class="intro route bg-image" style="background-image: url('{{ url_for('static', filename='img/about.png')}}'); width:100%; max-width:100%">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4">About Me</h1>
+            <div class="Tagline">
+                Here is Some Info About me
+            </div>
+            <a type="button" href= "#about"class="btn btn-primary btn-lg buttons ">
+                Get to know about me
+              </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="title-box-2">
+              <h5 class="title-left" align="center" style="color:rgb(20, 20, 22)">
+                About me
+              </h5>
+            </div>
+            <div class="row" style="color:rgb(20, 20, 22)">
+              <div class="col-sm-6">
+                <div class="about-info">
+                  <p>
+                    <span class="title-s">Name: </span>
+                    <span>Md. Manzum Rahman</span>
+                  </p>
+                  <p>
+                    <span class="title-s">Profile: </span> 
+                    <span>Student</span>
+                  </p>
+                  <p>
+                    <span class="title-s">Institute: </span>
+                    <span>Faujdarhat Cadet College, Chattogram</span>
+                  </p>
+                  <p>
+                    <span class="title-s">Address: </span> 
+                    <span>220/9, B- Block, Chandgaon R/A,<br> Chattogram, Bangladesh</span>
+                  </p>
+                  <p>
+                    <span class="title-s">Email: </span> <span>manzumrahman@gmail.com</span>
+                  </p>
+                  <p>
+                    <span class="title-s">Phone: </span>
+                    <span>(880)171-8180311</span></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-10 pt-md-0">
+                  <p class="about-lead">
+                    I am a student of 8th Grade in Faujdarhat Cadet College, Bangladesh .I am 14 years old. Coding is my hobby. I spend most of my free time in it. I am mainly interested in machine learning , Artificial Intelligence and all those cool stuff. I also like competetive programming. I tried game development too and know a little bit about it .I also like to develope websites, though I mostly work with backend stuff ,I also play around with front end development.
+                  </p>
+                  <p class="about-lead">
+                    <b>In short, I like to do a bit of everything I like :)</b> 
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        <!-- Pager -->
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

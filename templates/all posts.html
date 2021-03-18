@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}  
+  <!-- Page Header -->
+  <div id="home" class="intro route bg-image" style="background-image: url('{{ url_for('static', filename='img/intro-bg.png')}}'); width:100%; max-width:100%">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4"><span>All Posts</h1>
+          <div class="Tagline">
+                You can read all my blogs here :)
+        </div>
+        <a type="button" href= "#posts"class="btn btn-primary btn-lg buttons ">
+          Read My Latest Blogs
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <section id="posts" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" >
+          <div class="box-shadow-full">
+            <div class="title-box-2">
+              <h5 class="title-left" align="center" style="color:black" >
+                My Latest Posts
+              </h5>
+            </div>
+                <p class="lead" style="color: rgb(0, 0, 0);" >
+                  {% for post in posts %}
+                    <div class="lead">
+                      <a href="post/{{post.slug}}">
+                        <h2>{{post.title}}</h2>
+                        <h3>-{{post.sub_title}}</h3>
+                        <p>Posted by {{post.author}} on {{post.date}}</p>
+                        <p>{{post.content[0:100]}} ......</p>
+                      </a>
+                    </div>
+                    <hr>
+                  {% endfor %}
+                  <div class="clearfix">
+                    <a class="btn btn-primary primary-buttons float-left" href="{{previous_page}}">&larr; Previous</a>
+                    <a class="btn btn-primary primary-buttons float-right" href="{{next_page}}">Next &rarr;</a>
+                  </div>
+                </p> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Pager -->
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}  
+
+  <!-- Page Header -->
+{% set filename = 'img/'+ post.img_file %}
+  <div id="home" class="intro route bg-image" style="background-image: url('{{ url_for('static', filename=filename)}}'); width:100%; max-width:100%">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <div class="post-heading">
+            <h1>{{post.title}}</h1>
+            <h2 class="subheading">{{post.sub_title}}</h2>
+            <span class="meta">Posted by
+              <a href="#">{{post.author}}</a>
+              on {{post.date}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row" style='padding-top: 10%;'>
+        <div class="col-lg-8 col-md-10 mx-auto" style = "color: white;">
+          <p>
+            {{post.content}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% endblock %}

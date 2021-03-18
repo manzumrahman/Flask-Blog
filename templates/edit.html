@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block body %}  
+  <!-- Page Header -->
+<div id="home" class="intro route bg-image" style="background-image: url('{{ url_for('static', filename='img/admin-bg.jpg')}}'); width:100%; max-width:100%">
+  <div class="overlay-itro"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h1 class="intro-title mb-4">Admin Panel</h1>
+          <div class="Tagline">
+            Assalamualaikum Admin. You can edit your posts here:)
+          </div>
+          <a type="button" href= "#about"class="btn btn-primary btn-lg buttons ">
+              Manage Your Posts
+            </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<section class="paralax-mf footer-paralax bg-image sect-mt4 route">
+  <div class="container">
+    <div class="row">
+        <div id="contact" class="col-sm-12 box-shadow-full" style= "color:black">
+          <a href="/dashboard"><button class="btn btn-primary">Dashboard</button></a>
+          <a href="/logout"><button class="btn btn-primary float-right">Logout</button></a>
+          <br>
+          {% if new_post == true %}
+              <p>Wanna Make A New Post? </p>
+              {% set serial = 0 %}
+          {% else %}
+              <p>Wanna Edit Your Post?</p>
+              {% set serial = post.serial %}
+          {% endif %}
+          <form name="sentMessage" id="contactForm" action="/edit/{{serial}}" method="post">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Title</label>
+                <input class="form-control" placeholder="Title"  name="title" required data-validation-required-message="Please enter your name." value="{{post.title}}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Subtitle</label>
+                <input name="subtitle" class="form-control" placeholder="Subtitle"  required data-validation-required-message="Please enter your email address." value="{{post.sub_title}}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>slug</label>
+                <input name="slug" class="form-control" placeholder="Slug" required data-validation-required-message="Please enter your phone number." value="{{post.slug}}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Content</label>
+                <textarea name="content" rows="5" class="form-control" placeholder="Content" required data-validation-required-message="Please enter a message.">{{post.content}}</textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Author</label>
+                <input name="author" class="form-control" placeholder="Author" required data-validation-required-message="Please enter your phone number." value="{{post.author}}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div><div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Image</label>
+                <input name="image" class="form-control" placeholder="Image" required data-validation-required-message="Please enter your phone number." value="{{post.img_file}}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
