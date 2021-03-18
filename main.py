@@ -217,4 +217,5 @@ def upload():
             return 'File Uploaded Succesfully'
 
 
-app.run(host="0.0.0.0", port='80')
+# app.run(host="0.0.0.0", port='80')
+app.run()
