@@ -3,11 +3,11 @@
     "local_server": "True",
     "local_uri": "mysql+pymysql://root:1234@localhost/blog",
     "production_uri": "mysql+pymysql://root:1234@localhost/blog",
-    "mail_username": "manzumrahman@gmail.com",
-    "mail_password": "ScratchedManzum2006",
+    "mail_username": "putyourmailhere",
+    "mail_password": "putyourmailpasswordhere",
     "number_of_post": "3",
-    "admin_email": "manzumrahman@gmail.com",
-    "admin_password": "IamManzumRahman",
+    "admin_email": "putyourloginmailhere",
+    "admin_password": "putyourloginpasswordhere",
     "upload_folder": "E:\\Programming files\\Python\\Flask\\Flask Blog\\static\\img\\"
   }
 }
