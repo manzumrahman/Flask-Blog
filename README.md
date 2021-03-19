@@ -9,6 +9,6 @@
 pip install requirements.txt
 python main.py
 ```
-###  then your website will be live on https://127.0.0.1:5000
+###  then your website will be live on http://127.0.0.1:5000
 
 #### Made with ❤ by Md.Manzum Rahman :)
