@@ -3,7 +3,7 @@
 ### This is a blog that I have made with Flask.
 
 
-##Usage
+## Usage
 ### Clone this repositary and run the following code
  ```bash:
 pip install requirements.txt
